@@ -24,4 +24,4 @@ Setup:
 
 The generated images shoud appear in input_images.
 
-T
+Thank you.
