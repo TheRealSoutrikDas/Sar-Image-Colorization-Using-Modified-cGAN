@@ -1,3 +1,5 @@
+<p align="center"> <img src="https://github.com/user-attachments/assets/215a5f83-dacc-4ad8-8d50-bdf128c294e1" alt="SAR Colorization GAN Logo" width="500"/> </p> <h1 align="center">SAR Image Colorization Using a Modified Conditional GAN</h1> <p align="center"> <em>Enhancing SAR imagery using deep generative modeling with dual discriminators</em> </p> <p align="center"> <a href="https://github.com/your-username/Sar-Image-Colorization-Using-Modified-cGAN/actions"> <img src="https://img.shields.io/github/actions/workflow/status/your-username/Sar-Image-Colorization-Using-Modified-cGAN/python-app.yml?label=CI&logo=github&style=flat-square" alt="CI Status" /> </a> <img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square" alt="License" /> <img src="https://img.shields.io/badge/python-3.8%2B-green.svg?style=flat-square" alt="Python" /> <img src="https://img.shields.io/github/stars/your-username/Sar-Image-Colorization-Using-Modified-cGAN?style=social" alt="GitHub stars" /> </p>
+
 # SAR Image Colorization Using a Modified Conditional GAN (cGAN)
 
 This repository contains the implementation of a modified Conditional Generative Adversarial Network (cGAN) for the **colorization of Synthetic Aperture Radar (SAR) images**. The approach leverages a **dual-discriminator architecture** alongside a **U-Net-based generator** to enhance the realism and structural integrity of generated optical images from SAR inputs.
@@ -24,18 +26,14 @@ by *Li and Fu*
 
 ## 🧠 Model Architecture
 
-![Architecture](https://github.com/user-attachments/assets/215a5f83-dacc-4ad8-8d50-bdf128c294e1)
-
+<p align="center"> <img src="https://github.com/user-attachments/assets/215a5f83-dacc-4ad8-8d50-bdf128c294e1" alt="Architecture" width="800"/> </p>
+Figure: The modified cGAN architecture with a U-Net generator and dual discriminators.
 ---
 
 ## 🔍 Example Results
 
 **Input SAR Image**
-![Input](https://github.com/user-attachments/assets/946e2747-3ed4-44f4-88a1-9b54bca9b3cb)
-
-**Colorized Output Image**
-![Output](https://github.com/user-attachments/assets/dd3d1b35-f0bc-49e8-a267-b86d24c14bb1)
-
+<table> <tr> <td align="center"><strong>Input SAR Image</strong></td> <td align="center"><strong>Colorized Output</strong></td> </tr> <tr> <td align="center"> <img src="https://github.com/user-attachments/assets/946e2747-3ed4-44f4-88a1-9b54bca9b3cb" alt="Input SAR" width="300"/> </td> <td align="center"> <img src="https://github.com/user-attachments/assets/dd3d1b35-f0bc-49e8-a267-b86d24c14bb1" alt="Output Colorized" width="300"/> </td> </tr> </table>
 ---
 
 ## ⚙️ Setup Instructions
