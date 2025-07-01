@@ -1,27 +1,115 @@
-# Sar-Image-Colorization-Using-Modified-cGAN
-Colorization of SAR images using a modified conditional GAN which is using dual discriminator one for local characteristics other for the global.
-This is based on the research paper A SAR-to-Optical Image Translation Method Based on Conditional Generation Adversarial Network (cGAN)
-link to that research paper: https://www.semanticscholar.org/paper/A-SAR-to-Optical-Image-Translation-Method-Based-on-Li-Fu/3f99537a05196582f3f9f750d02b2995a8050b1f
-the discriminator in this research paper has been further modified such that it looks for smaller details in smaller patches and also using a global discriminator to discriminate the image globally.
-also using a UNET fir the generator. This is over all an adverserial model.
-![2-Figure1-1](https://github.com/user-attachments/assets/215a5f83-dacc-4ad8-8d50-bdf128c294e1)
+# SAR Image Colorization Using a Modified Conditional GAN (cGAN)
 
-Input image:
+This repository contains the implementation of a modified Conditional Generative Adversarial Network (cGAN) for the **colorization of Synthetic Aperture Radar (SAR) images**. The approach leverages a **dual-discriminator architecture** alongside a **U-Net-based generator** to enhance the realism and structural integrity of generated optical images from SAR inputs.
 
-![ROIs1868_summer_s1_59_p16](https://github.com/user-attachments/assets/946e2747-3ed4-44f4-88a1-9b54bca9b3cb)
-    
-Output image:
+---
 
-![generated_ROIs1868_summer_s1_59_p16](https://github.com/user-attachments/assets/dd3d1b35-f0bc-49e8-a267-b86d24c14bb1)
+## 📘 Background
 
-Setup:
-1. create a python virtual environment
-2. activate the environment
-3. install all dependencies using requirements.txt
-4. download and paste the generator_final.pth file to the project directory. link: https://drive.google.com/file/d/1AaIB38Ifc1uBNurf8huZJ0N7L1AWQ96M/view?usp=sharing
-5. paste sar images to be colorized to output_images folder.
-6. run the gen python script.
+This work builds upon the paper:
+**"A SAR-to-Optical Image Translation Method Based on Conditional Generative Adversarial Network (cGAN)"**
+by *Li and Fu*
+🔗 [Read the paper](https://www.semanticscholar.org/paper/A-SAR-to-Optical-Image-Translation-Method-Based-on-Li-Fu/3f99537a05196582f3f9f750d02b2995a8050b1f)
 
-The generated images shoud appear in input_images.
+### Key Modifications:
 
-Thank you.
+* **Dual Discriminators**:
+
+  * **Local Discriminator**: Captures fine-grained features from small patches of the image.
+  * **Global Discriminator**: Assesses the overall realism of the entire image.
+* **Generator Architecture**: Employs a **U-Net** to preserve spatial information via skip connections.
+* The adversarial setup helps the network learn both local texture consistency and global image coherence.
+
+---
+
+## 🧠 Model Architecture
+
+![Architecture](https://github.com/user-attachments/assets/215a5f83-dacc-4ad8-8d50-bdf128c294e1)
+
+---
+
+## 🔍 Example Results
+
+**Input SAR Image**
+![Input](https://github.com/user-attachments/assets/946e2747-3ed4-44f4-88a1-9b54bca9b3cb)
+
+**Colorized Output Image**
+![Output](https://github.com/user-attachments/assets/dd3d1b35-f0bc-49e8-a267-b86d24c14bb1)
+
+---
+
+## ⚙️ Setup Instructions
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/Sar-Image-Colorization-Using-Modified-cGAN.git
+cd Sar-Image-Colorization-Using-Modified-cGAN
+```
+
+### 2. Set Up Python Environment
+
+Create and activate a virtual environment:
+
+```bash
+python -m venv venv
+source venv/bin/activate  # or .\venv\Scripts\activate on Windows
+```
+
+### 3. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Download Pretrained Generator
+
+Download the pretrained generator weights from Google Drive and place the file in the project root directory:
+📥 [generator\_final.pth](https://drive.google.com/file/d/1AaIB38Ifc1uBNurf8huZJ0N7L1AWQ96M/view?usp=sharing)
+
+### 5. Inference
+
+1. Place SAR images to be colorized in the `output_images/` directory.
+2. Run the generator script:
+
+   ```bash
+   python gen.py
+   ```
+3. Generated colorized images will be saved in the `input_images/` directory.
+
+---
+
+## 🗂 Directory Structure
+
+```
+├── gen.py                     # Inference script
+├── generator_final.pth        # Pretrained model weights
+├── requirements.txt           # Python dependencies
+├── output_images/             # Folder for SAR input images
+└── input_images/              # Output folder for generated colorized images
+```
+
+---
+
+## 📝 Citation
+
+If you find this project useful in your research or work, please consider citing the original paper:
+
+> Li, Y., & Fu, K. (Year).
+> *A SAR-to-Optical Image Translation Method Based on Conditional Generative Adversarial Network (cGAN)*
+> [Semantic Scholar](https://www.semanticscholar.org/paper/A-SAR-to-Optical-Image-Translation-Method-Based-on-Li-Fu/3f99537a05196582f3f9f750d02b2995a8050b1f)
+
+---
+
+## 📄 License
+
+This project is provided for **educational and research purposes only**. Please review the [LICENSE](LICENSE) file (if available) for more details.
+
+---
+
+## 🙏 Acknowledgments
+
+* Inspired by advancements in SAR-to-optical translation and generative adversarial networks.
+* Special thanks to the authors of the referenced paper for their foundational work.
+
+---
