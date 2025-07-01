@@ -1,8 +1,9 @@
 <p align="center">
   <img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square" alt="License" />
   <img src="https://img.shields.io/badge/python-3.8%2B-green.svg?style=flat-square" alt="Python" />
-  <img src="https://img.shields.io/github/stars/TheRealSoutrikDas/SAR-Image-Colorization-cGAN?style=social" alt="GitHub stars" />
+  <img src="https://img.shields.io/github/stars/TheRealSoutrikDas/Sar-Image-Colorization-Using-Modified-cGAN?style=social" alt="GitHub stars" />
 </p>
+
 
 
 # SAR Image Colorization Using a Modified Conditional GAN (cGAN)
